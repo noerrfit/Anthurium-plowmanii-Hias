@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPlow - Beranda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        body {
+        background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-top: 20px; 
+        }
+
+        .wrapper {
+        display: flex;
+        width: 80%;
+        max-width: 1200px;
+        padding-top: 20px;
+        }
+
+        .sidebar {
+        width: 250px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        min-height: 100vh;
+        }
+
+        .logo {
+        width: 100px;
+        display: block;
+        margin: 0 auto 20px;
+        padding-top: 20px; 
+        }
+        .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        }
+        .nav-menu ul li {
+            margin: 10px 0;
+        }
+        .nav-menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .nav-menu ul li a i {
+            margin-right: 10px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .product-list, .services ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .product-item, .services ul li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-item:hover, .services ul li:hover {
+            transform: scale(1.05);
+        }
+        .testimonials p {
+            font-style: italic;
+            text-align: center;
+        }
+
+        .services-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .services-list li {
+            margin-bottom: 10px; 
+            font-size: 16px; 
+            color: #e0e0e0; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <img src="logo.jpg" width="80px"alt="" class="logo">
+            <h1 class="brand-name">GreenPlow</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="produk.html"><i class="fas fa-leaf"></i> Produk</a></li>
+                    <li><a href="layananWO.html"><i class="fas fa-ring"></i> Layanan WO</a></li>
+                    <li><a href="pelatihan.html"><i class="fas fa-book"></i> Pelatihan</a></li>
+                    <li><a href="outingclass.html"><i class="fas fa-school"></i> Outing Class</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="hero">
+                <h2>Selamat Datang di <span class="brand">GreenPlow</span> 🌿</h2>
+                <p>
+                    GreenPlow adalah penyedia tanaman hias premium dan layanan pendukung untuk mempercantik rumah serta lingkungan Anda.
+                </p>
+            </section>
+
+            <section class="services">
+                <h3>Layanan Kami</h3>
+                <ul class="services-list">
+                    <li>🌱 Tanaman Hias Premium</li>
+                    <li>💒 Layanan Wedding Organizer</li>
+                    <li>📚 Pelatihan Budidaya Tanaman</li>
+                    <li>🏡 Outing Class</li>
+                </ul>                
+            </section>
+
+            <section class="featured-products">
+                <h3>Produk Unggulan</h3>
+                <div class="product-list">
+                    <div class="product-item">Anthurium Plowmanii</div>
+                    <div class="product-item">Anthurium Mini</div>
+                    <div class="product-item">Aglonema Variegata</div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <h3>Testimoni Pelanggan</h3>
+                <p>"GreenPlow benar-benar memberikan kualitas tanaman terbaik! Saya sangat puas dengan layanannya." - Rina, Jakarta</p>
+                <p>"Wedding Organizer dari GreenPlow sangat profesional dan membantu acara pernikahan saya menjadi lebih indah!" - Andi & Siti</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

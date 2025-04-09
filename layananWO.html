@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan WO</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+            text-align: center;
+        }
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
+            padding: 100px 20px;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 0 0 20px 20px;
+        }
+        .packages, .gallery, .testimonials, .booking {
+            padding: 50px 30px;
+            background: white;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1100px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .package-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #ecf0f1;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-grid img {
+            width: 170px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.08);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        form input, form select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form select:focus {
+            border-color: #4ca1af;
+            outline: none;
+        }
+        button {
+            background: #4ca1af;
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #2c3e50;
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #206994, #4b729b);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #7ea2c9, #7388a7);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    </style>
+    <script>
+        function sendToWhatsApp() {
+            var package = document.getElementById("package").value;
+            var date = document.getElementById("date").value;
+            var phoneNumber = "6281227954471";
+            
+            var message = "Halo, saya ingin melakukan booking layanan WO dengan rincian berikut:%0A" +
+                          "Paket: " + package + "%0A" +
+                          "Tanggal Acara: " + date + "%0A" +
+                          "Mohon konfirmasi lebih lanjut. Terima kasih!";
+            
+            var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <h1>Wujudkan Pernikahan Impian dengan Sentuhan Hijau Elegan</h1>
+    </header>
+    <section class="packages">
+        <h2>Paket Dekorasi</h2>
+        <div class="package-cards">
+            <div class="card">
+                <h3>Basic Package</h3>
+                <p>Dekorasi minimalis dengan tanaman rustic gantung & meja.</p>
+            </div>
+            <div class="card">
+                <h3>Elegant Package</h3>
+                <p>Tambahan tanaman hias eksklusif & area photobooth.</p>
+            </div>
+            <div class="card">
+                <h3>Luxury Package</h3>
+                <p>Full dekorasi hijau + personalisasi tanaman untuk souvenir.</p>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <h2>Galeri Inspirasi</h2>
+        <div class="gallery-grid">
+            <img src="ft 4.jpg" alt="Dekorasi WO">
+            <img src="ft 5.jpg" alt="Dekorasi Rustic">
+            <img src="ft 6.jpg" alt="Dekorasi Outdoor">
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Testimoni Klien</h2>
+        <p>"Dekorasi yang indah, sesuai impian kami!" - Amanda & Reza</p>
+        <p>"Sentuhan hijau yang elegan, tamu-tamu kami suka sekali." - Dita & Fajar</p>
+    </section>
+    <section class="booking">
+        <h2>Form Booking & Konsultasi</h2>
+        <form onsubmit="event.preventDefault(); sendToWhatsApp();">
+            <label for="package">Pilih Paket:</label>
+            <select id="package">
+                <option>Basic Package</option>
+                <option>Elegant Package</option>
+                <option>Luxury Package</option>
+            </select>
+            <label for="date">Tanggal Acara:</label>
+            <input type="date" id="date">
+            <button type="submit">Kirim Permintaan</button>
+        </form>
+    </section>
+</body>
+<a href="index.html" class="back-btn">Kembali</a>
+</html>
